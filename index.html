@@ -7,15 +7,15 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Libre+Baskerville:ital@0;1&family=Pacifico&display=swap" rel="stylesheet">
 <style>
   :root {
-    --teal: #1a4a5c;
-    --teal-dark: #0d2f3a;
-    --teal-mid: #1e5570;
-    --amber: #D4841A;
-    --amber-light: #F0A030;
-    --cream: #F2E8D0;
-    --cream-dark: #E0D0B0;
-    --sand: #C8B87A;
-    --white: #ffffff;
+    --teal: #04283A;
+    --teal-dark: #042639;
+    --teal-mid: #649485;
+    --amber: #EE872A;
+    --amber-light: #FEB84D;
+    --cream: #FED88F;
+    --cream-dark: #FDC160;
+    --sand: #FEDEA0;
+    --white: #FDF8EE;
   }
 
   * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -86,63 +86,11 @@
     color: var(--sand);
   }
 
-  /* Script brand name */
-  .brand-script {
-    font-family: 'Pacifico', cursive;
-    font-size: clamp(3rem, 12vw, 7rem);
-    color: var(--cream);
-    text-shadow: 3px 4px 0 rgba(0,0,0,0.3), 0 0 60px rgba(212,132,26,0.2);
-    line-height: 1;
-    text-align: center;
-    animation: fadeDown 1s ease 0.2s both;
-    position: relative;
-  }
-
-  /* Underline swoosh */
-  .brand-script::after {
-    content: '';
-    display: block;
-    width: 80%;
-    height: 2px;
-    background: linear-gradient(to right, transparent, var(--cream), transparent);
-    margin: 8px auto 0;
-    opacity: 0.5;
-  }
-
-  /* Center illustration area */
-  .emblem {
-    position: relative;
-    margin: 24px 0;
-    animation: fadeIn 1s ease 0.5s both;
-  }
-
-  .sun-arc {
-    width: min(380px, 90vw);
+  /* Logo image */
+  .logo {
+    width: min(520px, 90vw);
     height: auto;
-  }
-
-  /* Sub brand name */
-  .brand-sub-wrap {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    animation: fadeUp 1s ease 0.7s both;
-    margin-top: -4px;
-  }
-
-  .dash-deco {
-    width: 36px;
-    height: 2px;
-    background: var(--cream-dark);
-  }
-
-  .brand-sub {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(1.2rem, 4vw, 2.2rem);
-    font-weight: 700;
-    letter-spacing: 0.18em;
-    color: var(--cream);
-    text-transform: uppercase;
+    animation: fadeIn 1s ease 0.2s both;
   }
 
   /* Divider ornament */
@@ -276,101 +224,17 @@
 </head>
 <body>
 
-<div class="glow"></div>
+<!--<div class="glow"></div>-->
 
 <div class="page">
 
   <div class="top-rule">
     <div class="rule-line"></div>
-    <div class="rule-text">Est. Elsberry, Missouri</div>
+    <div class="rule-text">Elsberry, Missouri</div>
     <div class="rule-line"></div>
   </div>
 
-  <div class="brand-script">Elsberry</div>
-
-  <!-- SVG emblem: sunset arc with wash tub scene -->
-  <div class="emblem">
-    <svg class="sun-arc" viewBox="0 0 380 220" xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <linearGradient id="sunGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:#F0A030;stop-opacity:1"/>
-          <stop offset="60%" style="stop-color:#D4841A;stop-opacity:1"/>
-          <stop offset="100%" style="stop-color:#8B4F0A;stop-opacity:0.8"/>
-        </linearGradient>
-        <linearGradient id="hillGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-          <stop offset="0%" style="stop-color:#3a6b30"/>
-          <stop offset="100%" style="stop-color:#2a4f22"/>
-        </linearGradient>
-        <linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style="stop-color:#5aA0B0"/>
-          <stop offset="100%" style="stop-color:#3a7888"/>
-        </linearGradient>
-        <clipPath id="arcClip">
-          <path d="M20,200 A170,170 0 0,1 360,200 Z"/>
-        </clipPath>
-      </defs>
-
-      <!-- Sun semicircle -->
-      <path d="M20,200 A170,170 0 0,1 360,200 Z" fill="url(#sunGrad)"/>
-
-      <!-- Stripes on sun -->
-      <g clip-path="url(#arcClip)" opacity="0.3">
-        <line x1="0" y1="120" x2="380" y2="120" stroke="#F0C040" stroke-width="8"/>
-        <line x1="0" y1="140" x2="380" y2="140" stroke="#E08020" stroke-width="6"/>
-        <line x1="0" y1="158" x2="380" y2="158" stroke="#C07010" stroke-width="5"/>
-        <line x1="0" y1="174" x2="380" y2="174" stroke="#A06010" stroke-width="4"/>
-      </g>
-
-      <!-- Sun disc -->
-      <circle cx="250" cy="130" r="36" fill="#FFD060" opacity="0.9"/>
-
-      <!-- Hills -->
-      <path d="M160,200 Q200,130 250,155 Q280,165 310,145 Q340,130 380,200 Z" fill="url(#hillGrad)" clip-path="url(#arcClip)"/>
-
-      <!-- River -->
-      <path d="M200,200 Q230,175 260,185 Q290,195 320,175 Q340,165 380,200 Z" fill="url(#riverGrad)" clip-path="url(#arcClip)" opacity="0.85"/>
-
-      <!-- Trees -->
-      <rect x="310" y="163" width="4" height="20" fill="#1a3a14" clip-path="url(#arcClip)"/>
-      <ellipse cx="312" cy="160" rx="10" ry="14" fill="#2a5a20" clip-path="url(#arcClip)"/>
-      <rect x="325" y="170" width="3" height="14" fill="#1a3a14" clip-path="url(#arcClip)"/>
-      <ellipse cx="326" cy="167" rx="8" ry="11" fill="#2a5a20" clip-path="url(#arcClip)"/>
-
-      <!-- Windmill -->
-      <line x1="145" y1="200" x2="145" y2="130" stroke="#1a2a18" stroke-width="2" clip-path="url(#arcClip)"/>
-      <g transform="translate(145,138)" clip-path="url(#arcClip)">
-        <line x1="0" y1="-18" x2="0" y2="18" stroke="#2a3a20" stroke-width="1.5"/>
-        <line x1="-18" y1="0" x2="18" y2="0" stroke="#2a3a20" stroke-width="1.5"/>
-        <line x1="-13" y1="-13" x2="13" y2="13" stroke="#2a3a20" stroke-width="1.5"/>
-        <line x1="13" y1="-13" x2="-13" y2="13" stroke="#2a3a20" stroke-width="1.5"/>
-        <circle cx="0" cy="0" r="4" fill="#1a2a18"/>
-      </g>
-
-      <!-- Birds -->
-      <path d="M220,100 Q225,95 230,100" stroke="#1a2a18" stroke-width="1.5" fill="none" clip-path="url(#arcClip)"/>
-      <path d="M238,92 Q243,87 248,92" stroke="#1a2a18" stroke-width="1.5" fill="none" clip-path="url(#arcClip)"/>
-
-      <!-- Wash tub (overlapping the arc base) -->
-      <!-- Tub body -->
-      <path d="M55,185 Q55,215 95,215 Q135,215 135,185" fill="#8B5E30" stroke="#6a4420" stroke-width="1.5"/>
-      <ellipse cx="95" cy="185" rx="40" ry="12" fill="#A06838"/>
-      <!-- Tub bands -->
-      <path d="M58,198 Q58,205 95,208 Q132,205 132,198" stroke="#5a3818" stroke-width="2" fill="none"/>
-      <!-- Bubbles -->
-      <circle cx="85" cy="178" r="7" fill="#f5f5f5" opacity="0.9"/>
-      <circle cx="98" cy="173" r="9" fill="#eeeeee" opacity="0.85"/>
-      <circle cx="110" cy="179" r="6" fill="#f8f8f8" opacity="0.9"/>
-      <circle cx="92" cy="168" r="5" fill="#ffffff" opacity="0.8"/>
-      <!-- Towel -->
-      <path d="M55,192 Q50,200 48,210 Q50,214 55,210 Q58,204 62,196 Z" fill="#dde8e8" stroke="#c0cccc" stroke-width="0.5"/>
-    </svg>
-  </div>
-
-  <div class="brand-sub-wrap">
-    <div class="dash-deco"></div>
-    <div class="brand-sub">Laundry Co.</div>
-    <div class="dash-deco"></div>
-  </div>
+  <img class="logo" src="logo.png" alt="Elsberry Laundry Co.">
 
   <div class="ornament">
     <div class="orn-line"></div>
