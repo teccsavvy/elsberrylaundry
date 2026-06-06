@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Elsberry Laundry Co.</title>
+  <meta name="description" content="Contact Elsberry Laundry Co. - located at 306 N. Main St, Elsberry, MO. Call, email, or send a message. Open daily 6 AM-10 PM.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 48px;
+      align-items: start;
+    }
+    .contact-info-card {
+      background: var(--slate);
+      color: var(--cream);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+    }
+    .contact-info-card h3 {
+      color: var(--cream);
+      margin-bottom: 24px;
+    }
+    .contact-detail {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--cream);
+    }
+    .contact-detail:last-child { border-bottom: none; }
+    .contact-detail-icon {
+      width: 40px; height: 40px;
+      background: rgba(200,135,58,.15);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+    .contact-detail-label {
+      font-size: 11px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 4px;
+    }
+    .contact-detail-value {
+      font-size: 15px;
+      color: rgba(245,240,232,.85);
+      line-height: 1.5;
+    }
+    .contact-detail-value a { color: var(--cream); transition: color var(--transition); }
+    .contact-detail-value a:hover { color: var(--amber); }
+    .map-placeholder {
+      background: var(--panel);
+      border-radius: var(--radius-lg);
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-light);
+      font-size: 14px;
+      margin-top: 24px;
+      border: 1px solid var(--border);
+      flex-direction: column;
+      gap: 8px;
+    }
+    @media(max-width:900px) {
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+   <!--<div id="top-bar-placeholder"></div>-->
+  <div id="nav-placeholder"></div>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Contact</div>
+      <h1>Get in Touch</h1>
+      <p>Questions about our services, hours, or commercial accounts? We'd love to hear from you.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- FORM -->
+        <div>
+          <span class="eyebrow">Send a Message</span>
+          <h2 style="margin-bottom:8px">We'll get back to you quickly.</h2>
+          <p style="margin-bottom:32px">Use this form for general inquiries, commercial account requests, or any questions about our services.</p>
+
+          <div style="background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:36px">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-first-name">First Name</label>
+                <input id="contact-first-name" type="text" placeholder="Jane">
+              </div>
+              <div class="form-group">
+                <label for="contact-last-name">Last Name</label>
+                <input id="contact-last-name" type="text" placeholder="Smith">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contact-email">Email Address</label>
+                <input id="contact-email" type="email" placeholder="jane@example.com">
+              </div>
+              <div class="form-group">
+                <label for="contact-phone">Phone Number</label>
+                <input id="contact-phone" type="tel" placeholder="(###) ###-####">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contact-topic">What can we help you with?</label>
+              <select id="contact-topic">
+                <option value="">Select a topic...</option>
+                <option>Wash & Fold Service</option>
+                <option>Self-Service Laundromat</option>
+                <option>Commercial Account Inquiry</option>
+                <option>Hotel / Hospitality Service</option>
+                <option>Airbnb / Vacation Rental Service</option>
+                <option>Pricing Question</option>
+                <option>General Question</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="contact-message">Your Message</label>
+              <textarea id="contact-message" placeholder="Tell us a bit about what you're looking for..."></textarea>
+            </div>
+            <button id="contact-submit" type="button" class="btn btn-primary" style="width:100%;justify-content:center;font-size:15px">Send Message</button>
+            <p style="font-size:12px;color:var(--text-light);text-align:center;margin-top:12px">We typically respond within one business day.</p>
+          </div>
+        </div>
+
+        <!-- INFO -->
+        <div>
+          <div class="contact-info-card">
+            <h3>Contact Information</h3>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div>
+                <div class="contact-detail-label">Address</div>
+                <div class="contact-detail-value">
+                  306 N. Main St<br>
+                  Elsberry, MO 63343
+                </div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📞</div>
+              <div>
+                <div class="contact-detail-label">Phone</div>
+                <div class="contact-detail-value">
+                  <a href="tel:5734855136">573-485-5136</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">✉️</div>
+              <div>
+                <div class="contact-detail-label">Email</div>
+                <div class="contact-detail-value">
+                  <a href="mailto:info@elsberrylaundry.com">info@elsberrylaundry.com</a>
+                </div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">🕐</div>
+              <div>
+                <div class="contact-detail-label">Hours</div>
+                <div class="contact-detail-value">
+                  Tuesday-Sunday<br>
+                  8:00 AM - 8:00 PM
+                </div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="contact-detail-icon">👕</div>
+              <div>
+                <div class="contact-detail-label">Wash & Fold Drop-Off</div>
+                <div class="contact-detail-value">
+                  Tuesday-Friday: 8 AM - 4 PM<br>
+                  Sat: 8 AM - 8 PM<br>
+                  Sun: 8 AM - 8 PM
+                </div>
+              </div>
+            </div>
+            <div class="map-placeholder">
+              <span>🗺️</span>
+              <span>306 N. Main St, Elsberry, MO 63343</span>
+              <a href="https://maps.app.goo.gl/ukmbevDgHC7D7ydx5" target="_blank" style="color:var(--amber-light);font-size:13px">Open in Google Maps</a>
+            </div>
+          </div>
+
+          <div style="margin-top:20px;display:flex;flex-direction:column;gap:12px">
+            <div class="info-box">
+              <div class="info-box-icon">🏪</div>
+              <div>
+                <h4>Commercial Accounts</h4>
+                <p>Looking to set up recurring service for your business? Use the form or call us directly - we'll get you a quote within 24 hours.</p>
+              </div>
+            </div>
+            <div class="info-box">
+              <div class="info-box-icon">📱</div>
+              <div>
+                <h4>Text Us</h4>
+                <p>Prefer to text? Reach us at <a href="sms:5734855136" style="color:var(--amber-light)">573-485-5136</a> and we'll respond as soon as we can.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="components.js"></script>
+</body>
+</html>

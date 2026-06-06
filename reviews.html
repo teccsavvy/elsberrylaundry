@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Customer Reviews | Elsberry Laundry Co.</title>
+  <meta name="description" content="See what customers are saying about Elsberry Laundry Co. - Elsberry, Missouri's locally owned laundromat.">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .review-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .review-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      position: relative;
+      transition: all var(--transition);
+    }
+    .review-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+    .review-card::before {
+      content: '"';
+      font-family: var(--font-display);
+      font-size: 5rem;
+      color: var(--amber);
+      opacity: .15;
+      position: absolute;
+      top: 8px; left: 18px;
+      line-height: 1;
+    }
+    .review-text { font-style: italic; color: var(--text-mid); padding-top: 28px; margin-bottom: 20px; font-size: 15px; line-height: 1.7; }
+    .review-footer { display: flex; align-items: center; gap: 12px; border-top: 1px solid var(--border); padding-top: 16px; }
+    .review-avatar {
+      width: 40px; height: 40px;
+      background: var(--amber);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .review-name { font-weight: 600; font-size: 14px; }
+    .review-source { font-size: 12px; color: var(--text-light); }
+    .rating-summary {
+      background: var(--slate);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      text-align: center;
+      color: var(--cream);
+      margin-bottom: 48px;
+    }
+    .big-rating { font-family: var(--font-display); font-size: 5rem; font-weight: 700; color: var(--amber); line-height: 1; }
+    .big-stars { font-size: 28px; color: var(--amber); margin: 8px 0; }
+    @media(max-width:900px) { .review-grid { grid-template-columns: 1fr 1fr; } }
+    @media(max-width:640px) { .review-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+   <!--<div id="top-bar-placeholder"></div>-->
+  <div id="nav-placeholder"></div>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a><span>/</span>Reviews</div>
+      <h1>What Our Customers Say</h1>
+      <p>Real feedback from real people in our community.</p>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+
+      <div class="rating-summary">
+        <div class="big-rating">5.0</div>
+        <div class="big-stars">★★★★★</div>
+        <p style="color:rgba(245,240,232,.65);margin:0;font-size:15px">Loved by the Elsberry community</p>
+      </div>
+
+      <!--<div class="review-grid">
+        <div class="review-card animate-up">
+          <p class="review-text">Wash & fold service was absolutely worth every penny. Clothes came back perfectly sorted, smelling fresh, and folded better than I ever would have done myself. Won't be going back to doing my own laundry.</p>
+          <div class="review-footer">
+            <div class="review-avatar">S</div>
+            <div>
+              <div class="review-name">Srinivas M.</div>
+              <div class="review-source">★★★★★ Google Review</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card animate-up delay-1">
+          <p class="review-text">So clean and the machines are genuinely nice. I washed gross car seat covers and comforters in the big Speed Queen washer - everything came out spotless. In and out in 30 minutes. I'll definitely be back.</p>
+          <div class="review-footer">
+            <div class="review-avatar">A</div>
+            <div>
+              <div class="review-name">Amy T.</div>
+              <div class="review-source">★★★★★ Google Review</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card animate-up delay-2">
+          <p class="review-text">Always clean and the equipment works well. That sounds basic but it's rarer than it should be. This place just runs the way a laundromat is supposed to.</p>
+          <div class="review-footer">
+            <div class="review-avatar">M</div>
+            <div>
+              <div class="review-name">Michelle K.</div>
+              <div class="review-source">★★★★★ Google Review</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card animate-up">
+          <p class="review-text">Clean, new equipment, the person working was super helpful. Got in and out with no issues. Didn't know they had drop-off service too - I'm going to try that next time.</p>
+          <div class="review-footer">
+            <div class="review-avatar">A</div>
+            <div>
+              <div class="review-name">Anthony R.</div>
+              <div class="review-source">★★★★★ Google Review</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card animate-up delay-1">
+          <p class="review-text">Great place to wash large items. The giant machines handle comforters easily. I'd rather come here than deal with the tiny machines at other places and have it take all afternoon.</p>
+          <div class="review-footer">
+            <div class="review-avatar">J</div>
+            <div>
+              <div class="review-name">Jason L.</div>
+              <div class="review-source">★★★★★ Google Review</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card animate-up delay-2">
+          <p class="review-text">Came in to wash some work jackets with stuck zippers while it was busy. The attendant helped me with both and kept smiling the whole time. That kind of service is genuinely refreshing.</p>
+          <div class="review-footer">
+            <div class="review-avatar">G</div>
+            <div>
+              <div class="review-name">Giuseppe F.</div>
+              <div class="review-source">★★★★★ Google Review</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card animate-up">
+          <p class="review-text">Attendant is always pleasant and hardworking. The laundromat is spotless and there's a great atmosphere. I've been coming regularly and I've never been disappointed.</p>
+          <div class="review-footer">
+            <div class="review-avatar">S</div>
+            <div>
+              <div class="review-name">Shuma A.</div>
+              <div class="review-source">★★★★★ Google Review</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card animate-up delay-1">
+          <p class="review-text">Nice clean friendly environment where you can wash a massive load for a fraction of what you'd spend using multiple small machines. Dryers do a great job too. Solid spot - using this permanently now.</p>
+          <div class="review-footer">
+            <div class="review-avatar">L</div>
+            <div>
+              <div class="review-name">Landon B.</div>
+              <div class="review-source">★★★★★ Google Review</div>
+            </div>
+          </div>
+        </div>
+        <div class="review-card animate-up delay-2">
+          <p class="review-text">The facility is really clean and the staff is pleasant. I love that the machines accept credit cards and even Apple Pay. The WiFi is a nice bonus while you wait. Impressed on my second visit.</p>
+          <div class="review-footer">
+            <div class="review-avatar">C</div>
+            <div>
+              <div class="review-name">Cynthia W.</div>
+              <div class="review-source">★★★★★ Google Review</div>
+            </div>
+          </div>
+        </div>
+      </div>-->
+
+    </div>
+  </section>
+
+  <!-- LEAVE A REVIEW CTA -->
+  <section class="section-sm bg-teal">
+    <div class="container text-center">
+      <span class="eyebrow">Share Your Experience</span>
+      <h2 style="margin-bottom:12px">Loved your visit?</h2>
+      <p style="max-width:440px;margin:0 auto 28px">Your review helps others in the community find us - and it means a lot to a small, local business.</p>
+      <a href="https://g.page/r/" target="_blank" class="btn btn-primary">Leave a Google Review</a>
+    </div>
+  </section>
+
+  <div class="cta-banner">
+    <div class="container">
+      <h2>Come experience it yourself.</h2>
+      <p>We're open Tuesday-Sunday from 8 AM to 8 PM. No appointment needed.</p>
+      <div class="btn-group">
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+        <a href="pricing.html" class="btn btn-outline-light">See Pricing</a>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer-placeholder"></div>
+  <script src="components.js"></script>
+</body>
+</html>
