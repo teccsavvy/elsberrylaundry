@@ -12,7 +12,7 @@ function renderTopBar() {
       <div class="top-bar-items">
         <a href="tel:5734855136">📞 573-485-5136</a>
         <a href="mailto:info@elsberrylaundry.com">✉ info@elsberrylaundry.com</a>
-        <span>🕐 Open Daily 6 AM - 10 PM</span>
+        <span>🕐 Open Wednesday-Sunday 6 AM - 10 PM</span>
       </div>
       <div class="top-bar-cta">
         <a href="contact.html">Get in Touch</a>
@@ -115,7 +115,7 @@ function renderFooter() {
           </div>
           <div class="footer-contact-item">
             <span class="icon">🕐</span>
-            <span>Open Daily · 8 AM - 8 PM</span>
+            <span>Open Wednesday-Sunday · 8 AM - 8 PM</span>
           </div>
         </div>
       </div>
