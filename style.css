@@ -318,12 +318,12 @@ strong { color: var(--gold); font-weight: 700; }
   border-radius: var(--radius-lg); padding: 28px; position: relative;
 }
 .testimonial::before {
-  content: '"'; font-family: var(--font-display); font-size: 5rem;
+  content: ''; font-family: var(--font-display); font-size: 5rem;
   color: var(--amber); opacity: .25; position: absolute; top: 8px; left: 20px; line-height: 1;
 }
 .testimonial-text { font-style: italic; color: var(--text-mid); margin-bottom: 16px; padding-top: 24px; }
 .testimonial-author { font-weight: 700; font-size: 14px; color: var(--gold); }
-.stars { color: var(--amber); font-size: 14px; margin-bottom: 8px; letter-spacing: 2px; }
+.stars { color: var(--amber); font-size: 28px; margin-bottom: 8px; letter-spacing: 2px; }
 
 /* ── FAQ Accordion ──────────────────────────────────────────── */
 .faq-item { border-bottom: 1px solid var(--border); }
